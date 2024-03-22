@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>
+			<%= (locals.title) ? title : "Please give this document a title" %>
+		</title>
+		<link
+			rel="stylesheet"
+			href="/css/normalize.css"
+			type="text/css"
+		/>
+		<link
+			rel="stylesheet"
+			href="/css/style.css"
+			type="text/css"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.7.1.min.js"
+			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			crossorigin="anonymous"
+		></script>
+		<script src="/js/script.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<% if(locals.content){ %> <%= content %> <% } %> <% if(locals.page){ %>
+			<% let path = '../pages/'+page %> %> <%- include(path) %> <% } %>
+		</div>
+	</body>
+</html>

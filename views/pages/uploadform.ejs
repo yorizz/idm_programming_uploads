@@ -1,0 +1,31 @@
+<h1>Upload an image</h1>
+<form
+	action="/upload"
+	method="post"
+	enctype="multipart/form-data"
+	id="uploadform"
+>
+	<%- (locals.messages.error) ? `
+	<div class="error">${messages.error}</div>
+	` : '' %>
+	<label for="picture">Your image</label>
+	<input
+		type="file"
+		name="picture"
+		id="picture"
+	/>
+
+	<label for="caption">Caption</label>
+	<input
+		type="text"
+		placeholder="Caption"
+		name="caption"
+		id="caption"
+		value="<%= (locals.caption)?caption:'' %>"
+	/>
+
+	<input
+		type="submit"
+		value="Upload"
+	/>
+</form>

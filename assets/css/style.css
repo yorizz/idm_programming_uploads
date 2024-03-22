@@ -1,0 +1,21 @@
+body {
+	font-family: sans-serif;
+}
+
+.wrapper {
+	width: 80vw;
+	margin: 0 auto;
+}
+
+input {
+	margin-bottom: 20px;
+	display: block;
+}
+label {
+	margin-bottom: 5px;
+	display: block;
+}
+
+.error {
+	color: red;
+}
